@@ -11,11 +11,7 @@ def generateStage(job) {
         echo "This is ${jobName} running on ${nodeLabel}."
         checkout([$class: 'GitSCM',
                   branches: [[name: '*/main']],
-                  extensions: [
-                    $class: 'CloneOption',
-                    shallow: true,
-                    depth: 1,
-                    timeout: 30],
+                  extensions: [],
                   userRemoteConfigs: [[
                     credentialsId: '3549018d-f3bb-4c73-ab8c-5ae89bcf4d72',
                     url: 'https://github.com/reneweb94/hello-World'
