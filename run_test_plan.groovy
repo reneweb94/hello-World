@@ -28,7 +28,7 @@ def generateStage(job) {
 }
 
 pipeline {
-  agent {label 'master'}
+  agent {label 'Master'}
   stages {
     stage('Create List of Stages') {
       steps {
