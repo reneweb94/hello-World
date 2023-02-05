@@ -18,7 +18,7 @@ def main():
   #bring it into a list of dictionaries 
   test_plan = [{'test': "Test-1", 'label': "kepler"},
                {'test': "Test-2", 'label': "eos"}]
-  json_object = json.dumps(testplan)
+  json_object = json.dumps(test_plan)
   print('Writing Test list to file: {0}'.format(args.filename))
   with open(args.filename, "w") as outfile:
     outfile.write(json_object)
