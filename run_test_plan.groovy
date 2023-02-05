@@ -21,7 +21,7 @@ def generateStage(job) {
                     url: 'https://github.com/reneweb94/hello-World'
                   ]]
                  ])
-        bat 'python hello_world'
+        bat 'py hello_world.py'
       }
     }
   }
@@ -32,7 +32,7 @@ pipeline {
   stages {
     stage('Create List of Stages') {
       steps {
-        bat 'python fetch_testplan.py --project kepler --testplan=kepler_A0_testplan --loops 10 --filename=testlist.json'
+        bat 'py fetch_testplan.py --project kepler --testplan=kepler_A0_testplan --loops 10 --filename=testlist.json'
         script {
           echo "Loading Testplan from file"
           def testplan = readJSON file:'testlist.json'
