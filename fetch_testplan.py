@@ -15,9 +15,9 @@ def main():
   args = parser.parse_args()
   print('Project: {0}, Testplan: {1}, Loops: {2}'.format(args.project, args.testplan, args.loops))
   print('Load Testplan/Testlist from test Management System')
-  #bring it into a list of dictionaries 
-  test_plan = [{'test': "Test-1", 'label': "kepler"},
-               {'test': "Test-2", 'label': "eos"}]
+  #bring it into a list of dictionaries and use as labels the testmachines
+  test_plan = [{'test': "Test-1", 'label': "Master"},
+               {'test': "Test-2", 'label': "Agent1"}]
   json_object = json.dumps(test_plan)
   print('Writing Test list to file: {0}'.format(args.filename))
   with open(args.filename, "w") as outfile:
