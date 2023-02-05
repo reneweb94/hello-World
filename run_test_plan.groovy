@@ -14,7 +14,7 @@ def generateStage(job) {
                   extensions: [],
                   userRemoteConfigs: [[
                     credentialsId: '3549018d-f3bb-4c73-ab8c-5ae89bcf4d72',
-                    url: 'https://github.com/reneweb94/hello-World'
+                    url: 'https://github.com/reneweb94/hello-World.git'
                   ]]
                  ])
         bat 'py hello_world.py'
