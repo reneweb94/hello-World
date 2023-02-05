@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurperClassic
 
-def parallel StagesMag
+def parallelStagesMap
 
 def generateStage(job) {
   return {
