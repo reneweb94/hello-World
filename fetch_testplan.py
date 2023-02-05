@@ -7,7 +7,7 @@ def main():
   user = os.getlogin()
   machine = platform.node()
   print("*** {0} running on {1} ***".format(user, machine))
-  parser = argprase.ArgumentParser(description='Process some integers.')
+  parser = argparse.ArgumentParser(description='Process some integers.')
   parser.add_argument('-p', '--project', type=str, required=True, help='Specify a Project Name')
   parser.add_argument('-t', '--testplan', type=str, required=True, help='Specify a Test Plan')
   parser.add_argument('-l', '--loops', type=int, required=True, help='Specify number of loops')
